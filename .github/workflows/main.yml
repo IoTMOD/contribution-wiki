@@ -9,8 +9,4 @@ jobs:
       run: |
         git remote add upstream https://github.com/iotmod/hornet-wiki.wiki.git
         git fetch upstream
-    - name: Push
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        repository: 'upstream master'
+        git push upstream master
