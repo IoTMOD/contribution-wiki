@@ -7,7 +7,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Pull remote
       run: |
-        git remote add upstream git@github.com:iotmod/hornet-wiki.wiki.git
+        git remote add upstream https://github.com/iotmod/hornet-wiki.wiki.git
         git fetch upstream
         git merge upstream/master
     - name: Push
