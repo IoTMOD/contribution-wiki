@@ -1,3 +1,3 @@
-### Welcome to the hornet-wiki wiki!
+### Welcome to the test wiki!
 Test
 Test 2425 **BOLD**
