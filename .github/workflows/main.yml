@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: test
-      run: echo $GITHUB_REPOSITORY
+      run: echo "$GITHUB_REPOSITORY.git"
     - name: repo-sync
       uses: wei/git-sync@v1
       env:
