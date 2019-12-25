@@ -10,11 +10,9 @@ jobs:
     - name: repo-sync
       uses: wei/git-sync@v1
       env:
-        SOURCE_REPO_GIT: "$GITHUB_REPOSITORY.git"
-        SOURCE_REPO: "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$SOURCE_REPO_GIT"
+        SOURCE_REPO: "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/iotmod/hornet-wiki.git"
         SOURCE_BRANCH: "master"
-        DESTINATION_REPO_GIT: "$GITHUB_REPOSITORY.wiki.git"
-        DESTINATION_REPO: "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$DESTINATION_REPO_GIT"
+        DESTINATION_REPO: "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/iotmod/hornet-wiki.wiki.git"
         DESTINATION_BRANCH: "master"
       with:
         args: $SOURCE_REPO $SOURCE_BRANCH $DESTINATION_REPO $DESTINATION_BRANCH
