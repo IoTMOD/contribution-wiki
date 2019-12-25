@@ -7,14 +7,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: test
-      run: echo "$GITHUB_REPOSITORY.git"
     - name: repo-sync
       uses: wei/git-sync@v1
       env:
-        SOURCE_REPO: "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+        SOURCE_REPO_GIT: "$GITHUB_REPOSITORY.git"
+        SOURCE_REPO: "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$SOURCE_REPO_GIT"
         SOURCE_BRANCH: "master"
-        DESTINATION_REPO: "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.wiki.git"
+        DESTINATION_REPO_GIT: "$GITHUB_REPOSITORY.wiki.git"
+        DESTINATION_REPO: "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$DESTINATION_REPO_GIT"
         DESTINATION_BRANCH: "master"
       with:
         args: $SOURCE_REPO $SOURCE_BRANCH $DESTINATION_REPO $DESTINATION_BRANCH
