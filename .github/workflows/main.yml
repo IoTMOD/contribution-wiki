@@ -7,9 +7,9 @@ jobs:
     - name: repo-sync
       uses: wei/git-sync@v1
       env:
-        SOURCE_REPO: "iotmod/hornet-wiki.git"
+        SOURCE_REPO: "https://github.com/iotmod/hornet-wiki.git"
         SOURCE_BRANCH: "master"
-        DESTINATION_REPO: "iotmod/hornet-wiki.wiki.git"
+        DESTINATION_REPO: "https://github.com/iotmod/hornet-wiki.wiki.git"
         DESTINATION_BRANCH: "master"
       with:
         args: $SOURCE_REPO $SOURCE_BRANCH $DESTINATION_REPO $DESTINATION_BRANCH
